@@ -8,7 +8,5 @@ export default {
         headers: { "Content-Type": "text/html" },
       });
     }
-    
-    return new Response("Not found", { status: 404 });
   },
 };
