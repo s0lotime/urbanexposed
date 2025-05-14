@@ -21,5 +21,9 @@ export async function contentManagement(request, env, type, user, info) {
         if (request.method === 'DELETE') {
             return new Response(JSON.stringify({ success: true, statustext: 'Request is understood, no functionality yet :|' }), { status: 200, headers: { 'Content-Type': 'application/json' } });
         }
+
+        return new Response(JSON.stringify({ success: false, statustext: 'Method not allowed' }), { status: 405, headers: { 'Content-Type': 'application/json' } });
     }
+
+    return new Response(JSON.stringify({ success: false, statustext: 'Resource or endpoint not found' }), { status: 404, headers: { 'Content-Type': 'application/json' } });
 }

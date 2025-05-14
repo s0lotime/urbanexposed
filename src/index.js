@@ -8,11 +8,5 @@ export default {
     if (pathname === '/api/content/management') {
       return contentManagement(request, env, 'pic', 'hi', 'info')
     }
-
-    if (pathname === '/hi') {
-      return new Response("hi", {
-        headers: { "Content-Type": "text/html" },
-      });
-    }
   },
 };
