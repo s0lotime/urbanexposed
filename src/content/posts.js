@@ -1,6 +1,6 @@
 export async function contentManagement(request, env, type, user, info) {
     if (type === 'pic') {
-        if (request === 'POST') {
+        if (request.method === 'POST') {
             const formData = await request.formData();
             const file = formData.get("file");
 
