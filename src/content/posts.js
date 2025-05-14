@@ -1,3 +1,5 @@
+import { uuid } from "uuidv4";
+
 export async function contentManagement(request, env, type, user, info) {
     if (type === 'pic') {
         if (request.method === 'POST') {
@@ -8,7 +10,7 @@ export async function contentManagement(request, env, type, user, info) {
                 return new Response(JSON.stringify({ success: false, statustext: 'No file attached' }), { status: 400, headers: { 'Content-Type': 'application/json' } });
             }
 
-            const key = file.name;
+            const key = 'useruploadedcontent/pics/' + uuid();
             await env.CDN.put(key, file.stream());
 
             return new Response(`Uploaded ${key} successfully!`);
