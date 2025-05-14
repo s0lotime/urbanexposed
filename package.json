@@ -6,13 +6,13 @@
     "axios": "^1.7.9",
     "crypto": "^1.0.1",
     "firebase-functions": "^6.3.2",
+    "fs": "^0.0.1-security",
     "http": "^0.0.1-security",
     "mysql": "^2.18.1",
     "sharp": "^0.34.1",
     "socket.io": "^4.8.1",
     "uuid": "^11.1.0",
-    "uuidv4": "^6.2.13",
-    "fs": "^0.0.1-security"
+    "uuidv4": "^6.2.13"
   },
   "devDependencies": {
     "wrangler": "^3.114.3"
