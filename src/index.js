@@ -1,5 +1,6 @@
 import { contentManagement } from './content/posts.js'
 import { handleAvatars } from './content/profile.js'
+import { sharp } from 'sharp'
 
 export default {
   async fetch(request, env, ctx) {

@@ -10,3 +10,7 @@ bucket_name = "urbanexposed-cdn"
 binding = "DATABASE"
 database_name = "urbanexposed-db"
 database_id = "35f9dd21-1444-4b06-b660-f739469d430c"
+
+[vars]
+MAX_IMAGE_SIZE = "10485760"
+MAX_VIDEO_SIZE = "52428800"

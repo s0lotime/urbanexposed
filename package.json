@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "@cloudflare/workerd-windows-64": "^1.20250402.0",
+    "@supabase/supabase-js": "^2.49.4",
+    "argon2": "^0.43.0",
+    "axios": "^1.7.9",
+    "crypto": "^1.0.1",
+    "firebase-functions": "^6.3.2",
+    "http": "^0.0.1-security",
+    "mysql": "^2.18.1",
+    "sharp": "^0.34.1",
+    "socket.io": "^4.8.1",
+    "uuid": "^11.1.0",
+    "uuidv4": "^6.2.13"
+  },
+  "devDependencies": {
+    "wrangler": "^3.114.3"
+  },
+  "name": "bocch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
