@@ -1,7 +1,5 @@
-export async function handleAvatars(request, env, user) {
-    const body = request.json();
-    
-    if (body.type === 'upload') {
+export async function handleAvatars(request, env, user, type) {
+    if (type === 'upload') {
         if (request.method === 'POST') {
             const formData = await request.formData();
             const file = formData.get('file');

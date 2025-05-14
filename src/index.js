@@ -10,8 +10,8 @@ export default {
       return contentManagement(request, env, 'pic', 'hi', 'info')
     }
 
-    if (pathname === '/api/profile/avatar') {
-      return handleAvatars(request, env, 'null')
+    if (pathname === '/api/profile/avatar/upload') {
+      return handleAvatars(request, env, 'null', 'upload')
     }
   },
 };
