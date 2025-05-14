@@ -9,7 +9,7 @@ export async function contentManagement(request, env, user, info) {
                 return new Response(JSON.stringify({ success: false, statustext: 'No file attached' }), { status: 400, headers: { 'Content-Type': 'application/json' } });
             }
 
-            if (!file.type.startsWith('image/') || !file.type.startsWith('video/')) {
+            if (!file.type.startsWith('image/') && !file.type.startsWith('video/')) {
                 return new Response(JSON.stringify({ success: false, statustext: 'Only image or video uploads are allowed to be posted' }), { status: 400, headers: { 'Content-Type': 'application/json' } });
             }
 
@@ -19,7 +19,7 @@ export async function contentManagement(request, env, user, info) {
                 fileType = 'vid'
             }
 
-            let key = 'useruploadedcontent/pics/' + uuid;
+            let key;
             const uuid = crypto.randomUUID();
 
             if (fileType === 'pic') {
