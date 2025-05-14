@@ -1,3 +1,4 @@
+import path from 'path';
 import { contentManagement } from './content/posts.js'
 import { handleAvatars } from './content/profile.js'
 
@@ -6,12 +7,16 @@ export default {
     const url = new URL(request.url);
     const pathname = url.pathname;
 
-    if (pathname === '/api/content/management') {
-      return contentManagement(request, env, 'pic', 'hi', 'info')
-    }
+    if (pathname.startsWith('/api/')) {
+      const remainder = pathname.replace('/api/', '')
 
-    if (pathname === '/api/profile/avatar/upload') {
-      return handleAvatars(request, env, 'null', 'upload')
+      if (remainder === 'content/management') {
+        return contentManagement(request, env, 'hi', 'info')
+      }
+
+      if (remainder === 'profile/avatar/upload') {
+        return handleAvatars(request, env, 'null', 'upload')
+      }
     }
   },
 };
