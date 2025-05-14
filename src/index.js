@@ -1,4 +1,3 @@
-import path from 'path';
 import { contentManagement } from './content/posts.js'
 import { handleAvatars } from './content/profile.js'
 
